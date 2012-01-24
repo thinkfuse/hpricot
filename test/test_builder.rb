@@ -25,7 +25,7 @@ class TestBuilder < Test::Unit::TestCase
 
   def test_escaping_attrs
     text = "<span style='font-family:\"MS Mincho\"'>Some text</span>"
-    assert_equal "<span style=\"font-family:\\\"MS Mincho\\\"\">Some text</span>",
+    assert_equal "<span style=\"font-family:&#34;MS Mincho&#34;\">Some text</span>",
       Hpricot(text).to_html
   end
 

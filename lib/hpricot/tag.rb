@@ -19,7 +19,7 @@ module Hpricot
 
   module Node
     def html_quote(str)
-      "\"" + str.gsub('"', '\\"') + "\""
+      "\"#{str.gsub('"', '&#34;').gsub("'", '&#39;')}\""
     end
     def clear_raw; end
     def if_output(opts)
